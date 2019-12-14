@@ -1,6 +1,7 @@
-require "star_wars_characters/version"
 
 module StarWarsCharacters
-  class Error < StandardError; end
+  #class Error < StandardError; end
   # Your code goes here...
 end
+
+require_relative '../config/environment'

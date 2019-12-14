@@ -1,7 +1,16 @@
 class StarWarsCharacters::CLI
     def call
-        puts  "a list of star wars characters, numbered 1-10
-        gives user option to choose one
-        puts that characters stats"
+        puts "Welcome to the Star Wars Characters CLI!" 
+        menu
     end
+
+    def menu
+        puts "Which character would you like to know more about?"
+
+        input = gets.strip 
+
+        StarWarsCharacters::API.fetch
+        (input)
+    end
+
 end
