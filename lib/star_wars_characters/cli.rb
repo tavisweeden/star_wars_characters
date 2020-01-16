@@ -23,28 +23,32 @@ class StarWarsCharacters::CLI
 
     def call
 
-        puts "Welcome to the Star Wars Characters CLI! Please type the number of a character you would like to learn more about and press enter:"
+        puts "Welcome to the Star Wars Characters CLI! Please type the name of a character you would like to learn more about and press enter:"
 
         @data = StarWarsCharacters::API.new.fetch
-        @data
-        StarWarsCharacters::Characters.all.each.with_index(+1) do |char, i|
-            puts ("#{i}" + ".") + char.name
-            menu
-    
+            StarWarsCharacters::Characters
+        # StarWarsCharacters::Characters.all.each.with_index(+1) do |char, i|
+        #     puts ("#{i}" + ".") + char.name
+             menu
+            
         end
     
-
-        
     end
 
     def menu 
         input = gets.strip
-        #gets input and puts all attributes of character
-        
-         
+        print_character 
+
+    def print_character(character)
+        puts "#{character.name}"
+        puts "#{character.height}"
+           binding.pry
+
      end
 
+
 end
-end
+
+
 
 
