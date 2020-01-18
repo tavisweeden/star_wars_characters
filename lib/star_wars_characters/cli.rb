@@ -3,8 +3,12 @@ class StarWarsCharacters::CLI
 
         def start
             puts ""
-            puts "Welcome to the Star Wars Characters CLI!"
+            puts "WELCOME TO THE STAR WARS CHARACTER CLI!"
+            puts ""
             puts "Type the name of one of the following characters to learn more about them:"
+            puts ""
+            puts "***If you don't see the character you want to search in the list, simply type"
+            puts "a name and we will search the database for it!***"
             puts ""
             puts "Luke Skywalker         Obi-Wan Kenobi"
             puts "C-3PO                  Anakin Skywalker"
