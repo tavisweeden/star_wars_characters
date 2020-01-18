@@ -2,5 +2,5 @@
 
 require_relative '../lib/star_wars_characters'
 
-StarWarsCharacters::CLI.new.call
+StarWarsCharacters::CLI.new.start
 

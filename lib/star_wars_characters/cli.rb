@@ -1,53 +1,73 @@
- #class StarWarsCharacters::CLI
-    #def call
-        #puts "Welcome to the Star Wars Characters CLI!" 
-        #menu
-#     end
 
-#     def menu
-#         puts "Which character would you like to know more about?"
-
-#         input = gets.strip 
-
-#         StarWarsCharacters::API.fetch(input)
-        
-#         #StarWarsCharacters::Characters.all.each.with_index do |c,i|
-#            # puts "#{i}. #{c.name}"
-
-#     #end
-
-#     end
-
-# end
 class StarWarsCharacters::CLI
 
-    def call
+#     def call
 
-        puts "Welcome to the Star Wars Characters CLI! Please type the name of a character you would like to learn more about and press enter:"
+#         puts "Welcome to the Star Wars Characters CLI! Please type the name of a character you would like to learn more about and press enter:"
 
-        @data = StarWarsCharacters::API.new.fetch
-            StarWarsCharacters::Characters
-        # StarWarsCharacters::Characters.all.each.with_index(+1) do |char, i|
-        #     puts ("#{i}" + ".") + char.name
-             menu
+#         @data = StarWarsCharacters::API.fetch
+#          StarWarsCharacters::Characters.all.each.with_index(1) do |char, i|
+#              puts "#{i}. #{char.name}"
+#              #binding.pry
+
+#              menu
             
-        end
+#         end
     
+#     end
+
+#     def menu 
+#         input = gets.strip
+       
+
+#      end
+
+
+# end
+
+        def start
+            puts ""
+            puts "Welcome to the Star Wars Characters CLI!"
+            puts "Type the name of one of the following characters to learn more about them:"
+            puts ""
+            puts "Luke Skywalker         Obi-Wan Kenobi"
+            puts "C-3PO                  Anakin Skywalker"
+            puts "R2D2                   Chewbacca"
+            puts "Darth Vader            Han Solo"
+            puts "Leia Organa            Lando Calrissian"
+            puts "Palpatine              Yoda"
+            puts "Boba Fett              Greedo"
+            puts ""
+            puts ""
+
+            menu
+
+            puts "Would you like to search another name? Type Y or N."
+            input = gets.strip.downcase
+                if input == "y"
+                    start
+                elsif input == "n"
+                    exit
+                else 
+                    puts "Sorry, we don't have a match for that name. Please try again!" 
+                    start
+                end            
+
+
+        end
+
+
+        def menu
+            input = gets.strip
+
+            StarWarsCharacters::API.fetch(input)
+            
+            #binding.pry
+        end
+
     end
 
-    def menu 
-        input = gets.strip
-        print_character 
 
-    def print_character(character)
-        puts "#{character.name}"
-        puts "#{character.height}"
-           binding.pry
-
-     end
-
-
-end
 
 
 
