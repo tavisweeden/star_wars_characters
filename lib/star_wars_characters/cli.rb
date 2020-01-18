@@ -1,7 +1,7 @@
 
 class StarWarsCharacters::CLI
-
-        def start
+ 
+    def start
             puts ""
             puts "WELCOME TO THE STAR WARS CHARACTER CLI!"
             puts ""
@@ -29,23 +29,22 @@ class StarWarsCharacters::CLI
                 elsif input == "n"
                     exit
                 else 
-                    puts "Sorry, we don't have a match for that name. Please try again!" 
                     start
-                end            
-
-        end
-
-
-        def menu
+            end  
+    end      
+                
+    
+    def menu
             input = gets.strip
-
             StarWarsCharacters::API.fetch(input)
-            
-            #binding.pry
-        end
-
+                        
     end
+            
+end            
 
+
+
+    
 
 
 
