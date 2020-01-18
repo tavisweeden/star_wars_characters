@@ -1,16 +1,8 @@
 class StarWarsCharacters::API
 
-    # def self.fetch
-    #     base_uri = 'https://swapi.co/api/people/'
-    #     response = HTTParty.get(base_uri)
-    #     print response
-
     def self.fetch(char_name)
         base_uri = 'https://swapi.co/api/people/'
         response = HTTParty.get("#{base_uri}?search=#{char_name}")
-
-        #print response
-                    
 
         response["results"].each do |char|
             name = char["name"]
@@ -32,20 +24,10 @@ class StarWarsCharacters::API
             puts "Birth Year: #{character.birth_year}"
             puts "Gender: #{character.gender}"
             
-            
-                        
-            #binding.pry
-
-             
-
         end
 
-
-
     end
-
     
-
 end
 
 

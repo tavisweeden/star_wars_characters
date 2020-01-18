@@ -17,8 +17,7 @@ class StarWarsCharacters::Characters
 
     def self.all
         self.fetch
+    
     end
-#binding.pry
-   
 
 end

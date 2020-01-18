@@ -1,30 +1,6 @@
 
 class StarWarsCharacters::CLI
 
-#     def call
-
-#         puts "Welcome to the Star Wars Characters CLI! Please type the name of a character you would like to learn more about and press enter:"
-
-#         @data = StarWarsCharacters::API.fetch
-#          StarWarsCharacters::Characters.all.each.with_index(1) do |char, i|
-#              puts "#{i}. #{char.name}"
-#              #binding.pry
-
-#              menu
-            
-#         end
-    
-#     end
-
-#     def menu 
-#         input = gets.strip
-       
-
-#      end
-
-
-# end
-
         def start
             puts ""
             puts "Welcome to the Star Wars Characters CLI!"
@@ -52,7 +28,6 @@ class StarWarsCharacters::CLI
                     puts "Sorry, we don't have a match for that name. Please try again!" 
                     start
                 end            
-
 
         end
 
