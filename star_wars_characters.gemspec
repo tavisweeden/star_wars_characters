@@ -5,12 +5,12 @@ require "star_wars_characters/version"
 Gem::Specification.new do |spec|
   spec.name          = "star_wars_characters"
   spec.version       = StarWarsCharacters::VERSION
-  spec.authors       = ["<github username>"]
-  spec.email         = ["<github email address>"]
+  spec.authors       = ["Tavis Weeden"]
+  spec.email         = ["tavisweeden@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Star Wars Characters CLI"
+  spec.description   = "Allows users to search attributes of popular Star Wars Characters."
+  spec.homepage      = "https://github.com/tavisweeden/star_wars_characters"
   spec.license       = "MIT"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
